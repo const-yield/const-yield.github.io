@@ -6,7 +6,7 @@ category: Machine Learning
 tags: [Learning theory]
 ---
 
-Supervised learning, or learning from examples,  refers the training of a learning machine with examples.  The goal of supervised learning is to achieve good performance on test data. The performance of a learning machine evaluated on test data is termed to its *generalization* performance. 
+Supervised learning, or learning from examples,  refers to the training of a learning machine with examples.  The goal of supervised learning is to achieve good performance on test data. The performance of a learning machine evaluated on test data is termed to its *generalization* performance. 
 
 The study of the generalization performance of a learning machine dates back to 1960s. 
 It has been discovered that, for a given learning task with a finite set of training data, a learning machine can achieve its best generalization performance if a balance is struck between the accuracy attained on that particular training set and the complexity of the machine. This important criterion is formalized as the Structural Risk Minimization (SRM). 
