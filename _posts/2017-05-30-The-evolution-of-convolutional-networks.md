@@ -1,3 +1,11 @@
+---
+layout: post
+title: "The Evolution of Convolutional Networks ImageNet"
+description: ""
+category: Machine Learning 
+tags: [Neural networks]
+---
+
 The Evolution of Convolutional Networks ImageNet
 ==
  
