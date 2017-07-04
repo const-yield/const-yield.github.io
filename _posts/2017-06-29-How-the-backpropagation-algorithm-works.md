@@ -203,14 +203,49 @@ Summary
 --
 Here is the summary of the four fundamental equations:
  
-- $\delta_{j}^{L}  = \frac{\partial C}{\partial  a_{j}^{L}} *  \sigma'(z_{j}^{L}) $ (BP1)
- - $\delta_{j}^{l} = \sum_{k} w_{k,j}^{l+1} \sigma'(z_{j}^{l}) \delta_{k}^{l+1}$ (BP2)
+\begin{equation}
+\delta_{j}^{L}  = \frac{\partial C}{\partial  a_{j}^{L}} *  \sigma'(z_{j}^{L})
+  \tag{BP1}
+\end{equation}
+  
+\begin{equation}
+\delta_{j}^{l} = \sum_{k} w_{k,j}^{l+1} \sigma'(z_{j}^{l}) \delta_{k}^{l+1}
+  \tag{BP2}
+\end{equation}
+
+\begin{equation}
+\frac{\partial C}{\partial  b_{j}^{l}} = \delta_{j}^{l}
+  \tag{BP3}
+\end{equation}
  
- - $\frac{\partial C}{\partial  b_{j}^{l}} = \delta_{j}^{l} $ (BP3)
- 
- - $\frac{\partial C}{\partial  w_{j,k}^{l}} = a_{k}^{l-1} * \delta_{j}^{l}$. (BP4)
- 
+\begin{equation}
+\frac{\partial C}{\partial  w_{j,k}^{l}} = a_{k}^{l-1} * \delta_{j}^{l}
+  \tag{BP4}
+\end{equation} 
+  
 and their simplified form:
+
+
+\begin{equation}
+\delta^{L} =  \nabla_{a}^{C} \odot \sigma'(z^{L})
+  \tag{BP1}
+\end{equation}
+  
+\begin{equation}
+\delta^{l-1} = (W^{l})^{T} \delta^{l} \odot  \sigma'(z^{l-1})
+  \tag{BP2}
+\end{equation}
+
+\begin{equation}
+\frac{\partial C}{\partial  b^{l}} = \delta^{l}
+  \tag{BP3}
+\end{equation}
+ 
+\begin{equation}
+\frac{\partial C}{\partial  w} = a_{in} * \delta_{out}
+  \tag{BP4}
+\end{equation} 
+
  
 - $\delta^{L} =  \nabla_{a}^{C} \odot \sigma'(z^{L}) $ (BP1)
  
@@ -235,5 +270,5 @@ The Backpropagation algorithm is summarized as follows:
 1. Set the corresponding activation $a^{1}$ for the input layer, based on the given input $x$
 2. Compute $z^l = w^l * a^{l-1} + b^{l}$, and $a^l = \sigma(z^l)$ for each $l$ = $2$,$3$,...,$L$
 3. Compute the error at the last layer $\delta^{L}$ using **BP1**
- 4. Compute the errors at previous layers $\delta^{l}$, where $l$ = $L$-$1$, $L$-$2$,...$2$ using  **BP2**
+4. Compute the errors at previous layers $\delta^{l}$, where $l$ = $L$-$1$, $L$-$2$,...$2$ using  **BP2**
 5.  Output the gradient of the cost function using **BP3** and **BP4**

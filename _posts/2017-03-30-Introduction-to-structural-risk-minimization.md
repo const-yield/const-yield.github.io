@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Introduction to Structural Risk Minimization "
+title: "An Introduction to Structural Risk Minimization "
 description: ""
 category: Machine Learning 
 tags: [Learning theory]
@@ -52,7 +52,7 @@ Quite often we measure the VC dimension of a learning machine based on its defin
  
 For example, to measure the VC dimension for the learning machine $\{f( \mathbf{x},  \alpha)\} = sign(x^{T}x-\alpha)$, we start with two training instances. Each instance is labeled with one of the two colors: red for positive and blue for negative. The following cases should be considered: (i) both instances have the same labels; (ii) the two instances have different labels. Both cases are drawn in the figure below. 
 
-![A shattering example](/img/2017-03-30-shattering.png)
+![A shattering example](/img/2017-03-30/shattering.png)
 <center>Figure 1.  A shattering example </center>
  For case (i), if both instances are positive, $\alpha$ can be set to a small value such that both instances are  outside of the radius (See Fig 1.(a)) . On the other hand, if both instances are negative, $\alpha$ may be assigned a large value such that both instances are within the radius (See Fig 1.(b)). For case (ii), if the nearer of those two instances is negative and the further is positive, $\alpha$ can be adjusted so that the radius fall between them (See Fig 1.(c)). However if the nearer of them is positive and the other is negative (See Fig 1.(d)), there is no circle that we can create such that it labels the interior of the region red and the outer region blue.  That means no member from the set $\{f( \mathbf{x},  \alpha)\}$ can shatter two points.  Accordingly the VC dimension for $\{f( \mathbf{x},  \alpha)\}$ is just 1. 
 
