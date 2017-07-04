@@ -178,7 +178,7 @@ Since $\delta_{j}^{l} \equiv \frac{\partial C}{\partial  z_{j}^{l}}$ (**BP1**) ,
   \end{equation}
  
   
-Due to  $z^{l}_{j} =\sum_{k} w_{j,k}^{l}* a_{k}^{l-1} + b_{j}^{l}$, we have:  
+Due to $z_{j}^{l} = \sum_{k} w_{j,k}^{l}* a_{k}^{l-1} + b_{j}^{l}$, we have:  
 
 \begin{equation}
 \frac{\partial z_{j}^{l}}{\partial  w_{j,k}^{l}} =  a_{k}^{l-1} 
@@ -242,15 +242,6 @@ and their simplified form:
 \frac{\partial C}{\partial  w} = a_{in} * \delta_{out}
   \tag{BP4}
 \end{equation} 
-
- 
-- $\delta^{L} =  \nabla_{a}^{C} \odot \sigma'(z^{L}) $ (BP1)
- 
-- $\delta^{l-1} = (W^{l})^{T} \delta^{l} \odot  \sigma'(z^{l-1}) $ (BP2)
- 
-- $\frac{\partial C}{\partial  b^{l}} = \delta^{l}$ (BP3)
-           
-- $\frac{\partial C}{\partial  w} = a_{in} * \delta_{out}$ (BP4)
  
 
 The Backpropagation algorithm
