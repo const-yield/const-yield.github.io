@@ -140,7 +140,7 @@ Note that $z_{j}^{l} = \sum_{k} w_{j,k}^{l}* \sigma(z_{k}^{l-1})  + b_{j}^{l}$; 
 
 
 \begin{equation}
-\frac{\partial C}{\partial  b_{j}^{l}} =  \frac{\partial C}{\partial  z_{j}^{l}} * \frac{\partial z_{j}^{l}}{\partial  b_{j}^{l}} = \delta_{j}^{l} * \frac{\partial z_{j}^{l}}{\partial  b_{j}^{l}} $   
+\frac{\partial C}{\partial  b_{j}^{l}} =  \frac{\partial C}{\partial  z_{j}^{l}} * \frac{\partial z_{j}^{l}}{\partial  b_{j}^{l}} = \delta_{j}^{l} * \frac{\partial z_{j}^{l}}{\partial  b_{j}^{l}}  
    \tag{5}
 \end{equation}
  
@@ -148,7 +148,7 @@ Note that $z_{j}^{l} = \sum_{k} w_{j,k}^{l}* \sigma(z_{k}^{l-1})  + b_{j}^{l}$; 
 Since $z_{j}^{l} = \sum_{k} w_{j,k}^{l}* \sigma(z_{k}^{l-1})  + b_{j}^{l}$, we have:
 
 \begin{equation}
-\frac{\partial z_{j}^{l}}{\partial  b_{j}^{l}} = 1$ 
+\frac{\partial z_{j}^{l}}{\partial  b_{j}^{l}} = 1
    \tag{6}
 \end{equation} 
  
