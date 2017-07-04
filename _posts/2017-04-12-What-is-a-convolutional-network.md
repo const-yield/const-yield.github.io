@@ -18,7 +18,7 @@ A ordinary neural network  or multi-layer perceptron  (MLP) is made up of input/
  
 <div>
 <center>
-<img  alt="A multi-layer perceptron" src="/img/2017-04-12-multi-layer-perceptron.png">
+<img  alt="A multi-layer perceptron" src="/img/2017-04-12/multi-layer-perceptron.png">
 </center>
 <center>Figure 1. A multi-layer perceptron [3] </center>
 </div>
@@ -60,7 +60,7 @@ To utilize the prior knowledge on image recognition,  CNNs incorporate the follo
              
 <div>
 <center>
-<img  alt="A neural network with local connectivity" src="/img/2017-04-12-local-connectivity.png">
+<img  alt="A neural network with local connectivity" src="/img/2017-04-12/local-connectivity.png">
 </center>
 <center>Figure 2. A neural network with local connectivity [5] </center>
 <br>
@@ -73,7 +73,7 @@ To utilize the prior knowledge on image recognition,  CNNs incorporate the follo
                    
 <div>
 <center>
-<img  alt="A neural network with weight sharing" src="/img/2017-04-12-weight-sharing.png">
+<img  alt="A neural network with weight sharing" src="/img/2017-04-12/weight-sharing.png">
 </center>
 <center>Figure 3.  A neural network with weight sharing [5]  </center>
 <br>
@@ -89,7 +89,7 @@ As shown in Fig 4, LeNet is made up of alternating convolutional and sub-samplin
 
  <div>
  <center>
- <img  alt="The LeNet" src="/img/2017-04-12-LeNet-architecture.png">
+ <img  alt="The LeNet" src="/img/2017-04-12/LeNet-architecture.png">
  </center>
  <center>Figure 4.  The LeNet [5]   </center>
  <br>
