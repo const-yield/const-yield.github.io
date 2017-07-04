@@ -1,13 +1,10 @@
 ---
 layout: post
-title: "The Evolution of Convolutional Networks ImageNet"
+title: "The Evolution of Convolutional Networks"
 description: ""
 category: Machine Learning 
 tags: [Neural networks]
 ---
-
-The Evolution of Convolutional Networks ImageNet
-==
  
 This blog post briefs the evolution of  Convoluational Neural Networks (CNN).  The selected CNNs were developed for the ImageNet Large-Scale Visual Recognition Challenges (ILSVRC).  They are reviewed according to their time of publications chronologically.
  
