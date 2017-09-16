@@ -6,7 +6,6 @@ category: Machine Learning
 tags: [Neural networks]
 ---
 
- 
 This blog post is my study note on [chapter 2](http://neuralnetworksanddeeplearning.com/chap2.html) of the book "**Neural Networks and Deep Learning**".  The derivation of the four fundamental equations is the focus of this post.
  
 Notations
@@ -141,7 +140,7 @@ Note that $z_{j}^{l} = \sum_{k} w_{j,k}^{l}* \sigma(z_{k}^{l-1})  + b_{j}^{l}$; 
 
 
 \begin{equation}
-\frac{\partial C}{\partial  b_{j}^{l}} =  \frac{\partial C}{\partial  z_{j}^{l}} * \frac{\partial z_{j}^{l}}{\partial  b_{j}^{l}} = \delta_{j}^{l} * \frac{\partial z_{j}^{l}}{\partial  b_{j}^{l}} $   
+\frac{\partial C}{\partial  b_{j}^{l}} =  \frac{\partial C}{\partial  z_{j}^{l}} * \frac{\partial z_{j}^{l}}{\partial  b_{j}^{l}} = \delta_{j}^{l} * \frac{\partial z_{j}^{l}}{\partial  b_{j}^{l}}  
    \tag{5}
 \end{equation}
  
@@ -149,7 +148,7 @@ Note that $z_{j}^{l} = \sum_{k} w_{j,k}^{l}* \sigma(z_{k}^{l-1})  + b_{j}^{l}$; 
 Since $z_{j}^{l} = \sum_{k} w_{j,k}^{l}* \sigma(z_{k}^{l-1})  + b_{j}^{l}$, we have:
 
 \begin{equation}
-\frac{\partial z_{j}^{l}}{\partial  b_{j}^{l}} = 1$ 
+\frac{\partial z_{j}^{l}}{\partial  b_{j}^{l}} = 1
    \tag{6}
 \end{equation} 
  
@@ -179,7 +178,7 @@ Since $\delta_{j}^{l} \equiv \frac{\partial C}{\partial  z_{j}^{l}}$ (**BP1**) ,
   \end{equation}
  
   
-Due to  $z^{l}_{j} =\sum_{k} w_{j,k}^{l}* a_{k}^{l-1} + b_{j}^{l}$, we have:  
+Due to $z_{j}^{l} = \sum_{k} w_{j,k}^{l}* a_{k}^{l-1} + b_{j}^{l}$, we have:  
 
 \begin{equation}
 \frac{\partial z_{j}^{l}}{\partial  w_{j,k}^{l}} =  a_{k}^{l-1} 
@@ -243,15 +242,6 @@ and their simplified form:
 \frac{\partial C}{\partial  w} = a_{in} * \delta_{out}
   \tag{BP4}
 \end{equation} 
-
- 
-- $\delta^{L} =  \nabla_{a}^{C} \odot \sigma'(z^{L}) $ (BP1)
- 
-- $\delta^{l-1} = (W^{l})^{T} \delta^{l} \odot  \sigma'(z^{l-1}) $ (BP2)
- 
-- $\frac{\partial C}{\partial  b^{l}} = \delta^{l}$ (BP3)
-           
-- $\frac{\partial C}{\partial  w} = a_{in} * \delta_{out}$ (BP4)
  
 
 The Backpropagation algorithm
