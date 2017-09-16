@@ -13,8 +13,9 @@ I followed the instructions on [Jekyll QuickStart](http://jekyllbootstrap.com/us
 
 After goolging, I managed to fix the problem by following the steps below: 
 
+ * Install the Ruby interpretor 
  * Install the **bundler** gem by executing "*gem install bundler*"
  * Download the **Ruby Development Kit** from this [page](http://rubyinstaller.org/downloads/) and extract the file to a DevKit folder 
  * In the DevKit folder, hold Shift then click the right mouse button, select "Open command window". On the command window,  run "*ruby dk.rb init*", then "*ruby dk.rb install*" to bind it to ruby installations in your path.
- * Install the **pygments** gem by executing "*gem install pygments.rb*" 
+ * Install  the required gems by executing "*bundle install*"
  * Install the **jekyll-sitemap** gem by executing "*gem install jekyll-sitemap*" 

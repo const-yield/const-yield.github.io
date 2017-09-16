@@ -6,8 +6,6 @@ category: Machine Learning
 tags: [Neural networks]
 ---
 
-How the Backpropagation algorithm works
-==
  
 This blog post is my study note on [chapter 2](http://neuralnetworksanddeeplearning.com/chap2.html) of the book "**Neural Networks and Deep Learning**".  The derivation of the four fundamental equations is the focus of this post.
  
