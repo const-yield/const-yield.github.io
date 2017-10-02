@@ -14,8 +14,11 @@ In this post, the derivatives of matrices will be discussed for various cases. T
 
 Matrix-Valued Derivatives
 -----------------------
- - Differentiating a scalar function regarding a matrix
-The derivative of a function $f$ of a scalar variable $x$ with respect to a matrix $X \in R^{M \times N}$ can be written as a matrix of $f$ differentiated w.r.t each element $X_{ik}$, namely:
+
+----------
+__Differentiating a scalar function regarding a matrix__ 
+ 
+The derivative of a function $f$ of a scalar variable $x$ with respect to a matrix $X \in R^{M \times N}$ can be written as a matrix of $f$ differentiated w.r.t each element $X_{ij}$, namely:
  $$ \frac{\partial f}{\partial X} = 
 \left[ \frac{\partial f}{\partial X_{ij}} \right] =
   \left[ 
@@ -29,7 +32,9 @@ The derivative of a function $f$ of a scalar variable $x$ with respect to a matr
   \end{array} } 
   \right] \in R^{M \times N} $$
 
- - Differentiating a function matrix regarding a scalar
+----------
+__Differentiating a function matrix regarding a scalar__
+ 
 When $X_{ij}$ is a function of a scalar variable $x$, the derivative of $X$
 w.r.t. $x$ is defined as the matrix of each element $X_{ij}$ differentiated w.r.t $x$, namely 
  $$
@@ -53,11 +58,10 @@ Likewise, $[ABC]_{il}$ can be expanded as $$[ABC]_{il} = \sum_j A_{ij}[BC]_{jl} 
 
 Derivatives of an Inverse
 -----------------------
-Since $XX^{-1}  = I$, we can differentiate both sides w.r.t $x$ to obtain 
-[comment]: <> (Add an equatio here ) 
+Since $XX^{-1}  = I$, we can differentiate both sides w.r.t $x$ to obtain the following:
 $\frac{\partial X}{\partial x} X^{-1} + X \frac{\partial X^{-1}}{\partial x} = 0 \tag{2} $
 
-(1) can be transformed into: 
+(2) can be transformed into: 
 
 $\frac{\partial X^{-1}}{\partial x} = -X^{-1} \frac{\partial X}{\partial x} X^{-1} \tag{3}$
 
@@ -87,7 +91,7 @@ $$f = \sum_{i} [AXB]_{ii} = \sum_{i} \sum_{j} A_{ij}[XB]_{ji} =
 Take the derivative of $f$ w.r.t $X_{jk}$, and we can get:
 $\frac{\partial f}{\partial X_{jk}} = \sum_i A_{ij} B_{ki} = \sum_i B_{ki} A_{ij}  = [BA]_{kj} \tag{6}$
 
-In (6), as the order $(j,k)$ index in $X_{jk}$ is different from the $(k,j)$ index in $[BA]_{kj}$, we have to transpose the results in (6) to obtain the matrix form.
+In (6), as the order $(j,k)$ index in $X_{jk}$ is different from the $(k,j)$ index in $[BA]_{kj}$, we have to transpose the results in (6) to obtain its matrix form.
 
 This gives us: 
 $\frac{\partial f}{\partial X} = (BA)^{T} = A^TB^T$, i.e., $\frac{\partial tr[AXB]}{\partial X} = A^TB^T$
@@ -102,9 +106,9 @@ $$= \sum_{i} \sum_{j} \sum_{k} A_{ij} X_{kj} B_{ki}$$.
 Take the derivative of $f$ w.r.t $X_{kj}$, and we can get:
 $\frac{\partial f}{\partial X_{kj}} = \sum_i A_{ij} B_{ki} = \sum_i B_{ki} A_{ij}  = [BA]_{kj} \tag{7}$
 
-In (7), Since the order $(k,j)$ index in $X_{kj}$ is the same as  $(k,j)$ index in $[BA]_{kj}$, no matrix transposing is required to obtain the matrix form.
-As such, 
-$\frac{\partial f}{\partial X} = (BA)$, i.e., $\frac{\partial tr[AX^TB]}{\partial X} = BA$
+In (7), Since the order $(k,j)$ index in $X_{kj}$ is the same as  $(k,j)$ index in $[BA]_{kj}$, no matrix transposing is required to obtain its matrix form. 
+
+As such, $\frac{\partial f}{\partial X} = (BA)$, i.e., $\frac{\partial tr[AX^TB]}{\partial X} = BA$
 
 
 ----------
@@ -116,7 +120,7 @@ $$f = \sum_i [AXBXC^T]_{ii}$$
 $$= \sum_i \sum_j \sum_k \sum_l \sum_m A_{ij}X_{jk}B_{kl}X_{lm} C^{T}_{mi}$$
 $$= \sum_i \sum_j \sum_k \sum_l \sum_m A_{ij}X_{jk}B_{kl}X_{lm} C_{im} $$
 
-Note that there are two $X$ in the formula above, so we need to take derivative of $f$ w.r.t $X_{lm}$ and $X_{jk}$.
+Note that there are two $X$'s in the formula above, so we need to take derivative of $f$ w.r.t $X_{lm}$ and $X_{jk}$.
 
 $\frac{\partial f}{\partial X_{jk}} 
 = \sum_i \sum_l \sum_m A_{ij}B_{kl}X_{lm}C_{im} 
@@ -135,15 +139,15 @@ For (8), since the indices ($k,j$) in $$[BXC^TA]_{kj}$$ are in different order f
 Putting (8) and (9) together gives us:
 
 $\frac{\partial f}{\partial X} 
-=  \frac{\partial f}{\partial X_{jk}}  + \frac{\partial f}{\partial X_{lm}}
+=  \left[ \frac{\partial f}{\partial X_{jk}} \right] + \left[ \frac{\partial f}{\partial X_{lm}} \right]
 = (BXC^TA)^T + (C^TAXB)^T 
 = A^TCX^TB^T + B^TX^TA^TC $,
 
-That is $\frac{tr[AXBXC^T]}{\partial X} = A^TCX^TB^T + B^TX^TA^TC $
+That is, $\frac{tr[AXBXC^T]}{\partial X} = A^TCX^TB^T + B^TX^TA^TC $
 
-Alternatively, we can apply when we have learnt from first-order derivatives, i.e., 
+Alternatively, we can apply the rules we have learnt from doing first-order derivatives, i.e., 
 
-$\frac{\partial tr[AXB]}{\partial X} = A^TB^T$ to derive $\frac{tr[AXBXC^T]}{\partial X}$
+$\frac{\partial tr[AXB]}{\partial X} = A^TB^T$, to derive $\frac{tr[AXBXC^T]}{\partial X}$
 
 $$\frac{tr[AXBXC^T]}{\partial X} \\ $$ 
 $$=\frac{tr[(A)(X)(BXC^T)]}{\partial X}+\frac{tr[(AXB)X(C^T)]}{\partial X}$$ (Product rule for derivatives)  
