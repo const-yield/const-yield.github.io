@@ -2,8 +2,8 @@
 layout: post
 title: "A steo-to-step guide of FDA"
 description: ""
-category: Dimensionality reduction
-tags: [Machine Learning]
+category: Machine Learning
+tags: [Dimensionality reduction]
 ---
 
 Introduction
