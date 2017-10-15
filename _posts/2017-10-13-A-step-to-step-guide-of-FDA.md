@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A steo-to-step guide of FDA"
+title: "A steo-to-step guide of Fisher Discriminant Analysis"
 description: ""
 category: Machine Learning
 tags: [Dimensionality reduction]
